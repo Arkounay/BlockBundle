@@ -9,7 +9,7 @@ This lightweight and opinionated bundle allows to quickly render HTML blocks edi
 
 - In `AppKernel.php` add the bundle:
         
-        new Arkounay\Bundle\BlockBundle\ArkounayBlockBundle(),
+        new Arkounay\Bundle\BlockBundle\ArkounayBlockBundle()
 
 - Then, run the following command:
      
@@ -52,7 +52,7 @@ To edit an already existing entity text, you can add the following line:
 For example, with a "News" entity, you could add this to make its content editable:
     
     {{ render_entity_field(news, 'content') }}
-    {# instead of writing {{ news.content }} #}
+    {# instead of {{ news.content }} #}
     
 Those who don't have editing permissions will see the field as if `{{ news.content }}` was directly called.
 

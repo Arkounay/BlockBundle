@@ -1,0 +1,30 @@
+{
+  "name": "arkounay/block-bundle",
+  "type": "symfony-bundle",
+  "description": "WYSIWIG HTML editable blocks and entities bundle",
+  "keywords": [
+    "symfony",
+    "WYSIWIG",
+    "TinyMCE",
+    "Inline",
+    "bundle"
+  ],
+  "homepage": "https://github.com/Arkounay/BlockBundle",
+  "authors": [
+    {
+      "name": "Antonin Mozzati",
+      "email": "arkanen@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "symfony/framework-bundle": "^3.0",
+    "twig/twig": "~1.12"
+  },
+  "autoload": {
+    "psr-0": {
+      "Arkounay\\BlockBundle": ""
+    }
+  },
+  "target-dir": "Arkounay/BlockBundle"
+}
