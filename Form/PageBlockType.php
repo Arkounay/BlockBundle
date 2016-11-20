@@ -20,7 +20,7 @@ class PageBlockType extends AbstractType
             ->add('id', TextType::class, [
                 'disabled' => !$options['editable']
             ])
-            ->add('contenu', TextareaType::class, [
+            ->add('content', TextareaType::class, [
                 'attr' => ['class' => 'tinymce'],
                 'required' => false
             ])
