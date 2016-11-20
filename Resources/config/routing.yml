@@ -1,0 +1,4 @@
+pac_block:
+    resource: "@ArkounayBlockBundle/Controller/"
+    type:     annotation
+

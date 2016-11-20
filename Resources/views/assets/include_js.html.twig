@@ -1,0 +1,4 @@
+{% if has_inline_edit_permissions() %}
+    <script> var ajax_edit_pageblocks_url = "{{ path('arkounay_pageblocks_ajax') }}"; </script>
+    <script src="{{ asset('bundles/arkounayblock/js/arkounay_block_bundle.js') }}"></script>
+{% endif %}

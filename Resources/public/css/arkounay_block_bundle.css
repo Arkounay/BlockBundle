@@ -1,0 +1,11 @@
+.js-arkounay-block-bundle-editable {
+  border: 2px dashed #cb6664;
+  margin: -1px;
+  display: inline-block;
+  min-width: 50px;
+  min-height: 20px;
+}
+
+.js-arkounay-block-bundle-editable:hover {
+  border: 2px dashed #ff6953;
+}
