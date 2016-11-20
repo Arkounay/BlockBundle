@@ -7,6 +7,10 @@ This lightweight and opinionated bundle allows to quickly render HTML blocks edi
 
 ## Getting started
 
+- Download the files:
+        
+        composer require arkounay/block-bundle
+
 - In `AppKernel.php` add the bundle:
         
         new Arkounay\Bundle\BlockBundle\ArkounayBlockBundle()
@@ -65,8 +69,8 @@ Once you press click on "Save", a single Ajax request is sent to persist en flus
 #### Notes
 - By default, only users with the `ROLE_ADMIN` permission can edit inline text. To edit the allowed roles, you can edit your `config.yml`
         
-      arkounay_block:
-          roles: ['IS_AUTHENTICATED_ANONYMOUSLY'] # Will allow anyone to edit inline!
+        arkounay_block:
+            roles: ['IS_AUTHENTICATED_ANONYMOUSLY'] # Will allow anyone to edit inline!
           
 - To edit TinyMCE, create your own `@ArkounayBlock/assets/include_js.html.twig`
 
