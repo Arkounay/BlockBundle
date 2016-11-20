@@ -9,31 +9,31 @@ This lightweight and opinionated bundle allows to quickly render HTML blocks edi
 
 - In `AppKernel.php` add the bundle:
         
-      new Pac\Bundle\BlockBundle\ArkounayBlockBundle()
+        new Arkounay\Bundle\BlockBundle\ArkounayBlockBundle(),
 
 - Then, run the following command:
      
-      php bin/console assets:install 
+        php bin/console assets:install 
       
 - In your twig template, you will then need to import the required assets:
     
     - CSS:
         
-          {% include '@ArkounayBlock/assets/include_css.html.twig' %}
+            {% include '@ArkounayBlock/assets/include_css.html.twig' %}
 
     - JS (**requires [jQuery](https://jquery.com/) and [TinyMCE](https://www.tinymce.com/)**):
     
-          {# Import jQuery and TinyMCE: #}
-          <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.4.3/tinymce.min.js"></script>
-             
-          {# Then the default bundle's JavaScript: #}
-          {% include '@ArkounayBlock/assets/include_js.html.twig' %}
+            {# Import jQuery and TinyMCE: #}
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.4.3/tinymce.min.js"></script>
+               
+            {# Then the default bundle's JavaScript: #}
+            {% include '@ArkounayBlock/assets/include_js.html.twig' %}
 
 - In `routing.yml`, you will need to import the Ajax route:
         
-       block:
-           resource: "@ArkounayBlockBundle/Resources/config/routing.yml"
+         block:
+             resource: "@ArkounayBlockBundle/Resources/config/routing.yml"
            
 - Then update your database schema to add the provided PageBlock entity `bin\console doctrine:schema:update --force`
         
