@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkounay\Bundle\BlockBundle\Form;
+namespace Arkounay\BlockBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -30,7 +30,7 @@ class PageBlockType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Arkounay\Bundle\BlockBundle\Entity\PageBlock',
+            'data_class' => 'Arkounay\BlockBundle\Entity\PageBlock',
             'editable' => true
         ));
     }

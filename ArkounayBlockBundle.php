@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkounay\Bundle\BlockBundle;
+namespace Arkounay\BlockBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

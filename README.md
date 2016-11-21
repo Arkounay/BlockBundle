@@ -13,7 +13,7 @@ This lightweight and opinionated bundle allows to quickly render HTML blocks edi
 
 - In `AppKernel.php` add the bundle:
         
-        new Arkounay\Bundle\BlockBundle\ArkounayBlockBundle()
+        new Arkounay\BlockBundle\ArkounayBlockBundle()
 
 - Then, run the following command:
      

@@ -1,6 +1,6 @@
 <?php
 
-namespace Arkounay\Bundle\BlockBundle\DependencyInjection;
+namespace Arkounay\BlockBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

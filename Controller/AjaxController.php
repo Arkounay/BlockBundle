@@ -1,8 +1,8 @@
 <?php
 
-namespace Arkounay\Bundle\BlockBundle\Controller;
+namespace Arkounay\BlockBundle\Controller;
 
-use Arkounay\Bundle\BlockBundle\Entity\PageBlock;
+use Arkounay\BlockBundle\Entity\PageBlock;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
