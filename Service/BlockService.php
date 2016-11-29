@@ -26,14 +26,14 @@ class BlockService extends \Twig_Extension
      * Will be surrounded by a special div if has the permissions to edit.
      * Will be empty if not found in the database.
      */
-    public function renderBlock($blockId)
+    public function renderBlock($blockId, $isEditable = true)
     {
         $pageBlock = $this->em->getRepository('ArkounayBlockBundle:PageBlock')->find($blockId);
         $res = '';
         if ($pageBlock !== null) {
             $res = $pageBlock->getContent();
         }
-        if ($this->hasInlineEditPermissions()) {
+        if ($this->hasInlineEditPermissions() && $isEditable) {
             $res = '<div class="js-arkounay-block-bundle-editable js-arkounay-block-bundle-block" data-id="' . $blockId . '">' . $res . '</div>';
         }
         return $res;
