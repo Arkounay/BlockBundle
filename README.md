@@ -28,8 +28,10 @@ This lightweight and opinionated bundle allows to quickly render HTML blocks edi
     - JS (**requires [jQuery](https://jquery.com/) and [TinyMCE](https://www.tinymce.com/)**):
     
             {# Import jQuery and TinyMCE: #}
-            <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.4.3/tinymce.min.js"></script>
+            {% if has_inline_edit_permissions() %}
+                <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.4.3/tinymce.min.js"></script>
+            {% endif %}
                
             {# Then the default bundle's JavaScript: #}
             {% include '@ArkounayBlock/assets/include_js.html.twig' %}
@@ -39,7 +41,7 @@ This lightweight and opinionated bundle allows to quickly render HTML blocks edi
          block:
              resource: "@ArkounayBlockBundle/Resources/config/routing.yml"
            
-- Then update your database schema to add the provided PageBlock entity `bin\console doctrine:schema:update --force`
+- Then update your database schema to add the provided PageBlock entity `php bin/console doctrine:schema:update --force`
         
 ## Usage
         
