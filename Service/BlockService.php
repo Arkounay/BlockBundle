@@ -81,7 +81,11 @@ class BlockService extends \Twig_Extension
      */
     public function hasInlineEditPermissions()
     {
-        return $this->authorizationChecker->isGranted($this->roles);
+        try {
+            return $this->authorizationChecker->isGranted($this->roles);
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
     public function getName()
