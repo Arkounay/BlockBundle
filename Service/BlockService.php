@@ -48,7 +48,7 @@ class BlockService extends \Twig_Extension
      * Will be surrounded by a special span if has the permissions to edit.
      * Will be empty if not found in the database.
      */
-    public function renderSpanBlack($blockId, $isEditable = true)
+    public function renderSpanBlock($blockId, $isEditable = true)
     {
         return $this->renderBlock($blockId, $isEditable, 'span');
     }
@@ -112,6 +112,7 @@ class BlockService extends \Twig_Extension
     {
         return [
             'render_block' => new \Twig_SimpleFunction('render_block', [$this, 'renderBlock'], ['is_safe' => ['html']]),
+            'render_span_block' => new \Twig_SimpleFunction('render_span_block', [$this, 'renderSpanBlock'], ['is_safe' => ['html']]),
             'render_entity_field' => new \Twig_SimpleFunction('render_entity_field', [$this, 'renderEntityFieldTwig'], ['is_safe' => ['html']]),
             'render_plain_entity_field' => new \Twig_SimpleFunction('render_plain_entity_field', [$this, 'renderEntityFieldPlainTextTwig'], ['is_safe' => ['html']]),
             'has_inline_edit_permissions' => new \Twig_SimpleFunction('has_inline_edit_permissions', [$this, 'hasInlineEditPermissions'])

@@ -79,3 +79,11 @@ Once you press click on "Save", a single Ajax request is sent to persist en flus
 - You can also edit the `.js-arkounay-block-bundle-editable` to change the borders of the editable blocks.
 
 - In a twig file, you can use the function `has_inline_edit_permissions()` to see if a user has inline edit permissions. This can be useful if you want to import [jQuery](https://jquery.com/) or [TinyMCE](https://www.tinymce.com/) only for these users.
+
+- By default, a div will be surrounding the editable text when connected. You can choose another tag with the third parameter, i.e for a span :
+
+        {{ render_block('block_id', true, 'span') }}
+ 
+  you can also call this shortcut :
+   
+        {{ renderSpanBlack('block_id') }}
