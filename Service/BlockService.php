@@ -22,11 +22,13 @@ class BlockService extends \Twig_Extension
 
     /**
      * @param $blockId
+     * @param bool $isEditable
+     * @param string $dom The HTML element. Div by default.
      * @return string The HTML inside the block.
      * Will be surrounded by a special div if has the permissions to edit.
      * Will be empty if not found in the database.
      */
-    public function renderBlock($blockId, $isEditable = true)
+    public function renderBlock($blockId, $isEditable = true, $dom = 'div')
     {
         $pageBlock = $this->em->getRepository('ArkounayBlockBundle:PageBlock')->find($blockId);
         $res = '';
@@ -34,10 +36,23 @@ class BlockService extends \Twig_Extension
             $res = $pageBlock->getContent();
         }
         if ($this->hasInlineEditPermissions() && $isEditable) {
-            $res = '<div class="js-arkounay-block-bundle-editable js-arkounay-block-bundle-block" data-id="' . $blockId . '">' . $res . '</div>';
+            $res = '<' . $dom . ' class="js-arkounay-block-bundle-editable js-arkounay-block-bundle-block" data-id="' . $blockId . '">' . $res . '</' . $dom . '>';
         }
         return $res;
     }
+
+    /**
+     * @param $blockId
+     * @param bool $isEditable
+     * @return string The HTML inside the block.
+     * Will be surrounded by a special span if has the permissions to edit.
+     * Will be empty if not found in the database.
+     */
+    public function renderSpanBlack($blockId, $isEditable = true)
+    {
+        return $this->renderBlock($blockId, $isEditable, 'span');
+    }
+
 
     /**
      * @param $entity object The Entity object that owns the field which will be edited
