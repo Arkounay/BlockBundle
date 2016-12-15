@@ -86,4 +86,4 @@ Once you press click on "Save", a single Ajax request is sent to persist en flus
  
   you can also call this shortcut :
    
-        {{ renderSpanBlack('block_id') }}
+      {{ renderSpanBlack('block_id') }}
