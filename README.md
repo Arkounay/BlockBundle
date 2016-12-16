@@ -66,7 +66,7 @@ There is also another version with less editing options, usually for shorter tex
  
     {{ render_plain_entity_field(entity, 'field') }}
     
-Once you press click on "Save", a single Ajax request is sent to persist en flush entities.
+Once you press click on "Save", a single Ajax request is sent to persist and flush changed entities.
 
 #### Notes
 - By default, only users with the `ROLE_ADMIN` permission can edit inline text. To edit the allowed roles, you can edit your `config.yml`
@@ -80,10 +80,10 @@ Once you press click on "Save", a single Ajax request is sent to persist en flus
 
 - In a twig file, you can use the function `has_inline_edit_permissions()` to see if a user has inline edit permissions. This can be useful if you want to import [jQuery](https://jquery.com/) or [TinyMCE](https://www.tinymce.com/) only for these users.
 
-- By default, a div will be surrounding the editable text when connected. You can choose another tag with the third parameter, i.e for a span :
+- By default, a div will be surrounding the editable text when connected. You can choose another tag with the third parameter, i.e for a span:
 
         {{ render_block('block_id', true, 'span') }}
  
-  you can also call this shortcut :
+  you can also call this shortcut:
    
       {{ render_span_block('block_id') }}
