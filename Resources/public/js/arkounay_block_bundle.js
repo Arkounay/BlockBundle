@@ -18,8 +18,8 @@ $(function(){
         valid_elements: '*[*]',
         forced_root_block: '',
         remove_script_host: false,
-        cleanup: false,
         entity_encoding: "raw",
+        paste_as_text: true,
         convert_urls: false,
         save_onsavecallback: function () {
             entitiesCallbackSaveAjax();
@@ -39,7 +39,6 @@ $(function(){
         toolbar: "insertfile undo redo save code",
         invalid_elements: 'b, strong, i, em, span',
         forced_root_block: '',
-        cleanup: true,
         entity_encoding: "raw",
         paste_as_text: true,
         save_onsavecallback: function (ed) {
