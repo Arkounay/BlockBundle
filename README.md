@@ -66,7 +66,7 @@ There is also another version with less editing options, usually for shorter tex
  
     {{ render_plain_entity_field(entity, 'field') }}
     
-Once you press click on "Save", a single Ajax request is sent to persist and flush changed entities.
+Once you click on "Save", a single Ajax request is sent to persist and flush changed entities.
 
 #### Notes
 - By default, only users with the `ROLE_ADMIN` permission can edit inline text. To edit the allowed roles, you can edit your `config.yml`
